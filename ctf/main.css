@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+    
+}
+
+html, body{
+    width: 1440px;
+    margin: 0 auto;
+    background-color: rgb(235,235,235);
+}
+
+.loggo{
+    background-color: rgb(0, 191, 217);
+    height: 100px;
+    width: 100%;
+    /* border-radius: 0 0 10px 10px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+
+P{
+    color: white;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    flex: 1 30%;
+    background-color: white;
+    box-shadow: 0px 0px 15px 1px #a8a8a8;
+    
+   
+}
+
+.name{
+  margin: auto 0;
+}
+
+#prviet{
+    margin: 0 30px;
+    /* width: 85%; */
+    
+    height: 60px;
+}
+
+.title_text{
+    margin: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Ysabeau', sans-serif;
+    letter-spacing: 3px;
+    margin-right: 200px;
+}
+
+
+
+
+
+/* main windoooooooooooooooooows */
+
+.main_win{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.conteiner{
+    padding: 30px;
+    width: auto;
+    height: 150px;
+    background-color: rgba(175, 172, 172, 0.678);
+}
+
+.taskname{
+    margin: 30px 0;
+    color: black;
+}
+
+.tasksdes{
+    font-family: 'Ysabeau', sans-serif;
+    color: black;
+    margin: 30px 0;
+}
+
+/* input */
+
+.group        { 
+    position:relative; 
+    /*margin-bottom:45px;*/ 
+  }
+  input         {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+  }
+  input:focus     { outline:none; }
+  
+  /* LABEL ======================================= */
+  label          {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label    {
+    top:-20px;
+    font-size:14px;
+    color:rgb(0, 191, 217);
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar  { position:relative; display:block; width:300px; }
+  .bar:before, .bar:after   {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:rgb(0, 191, 217); 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  .bar:before {
+    left:50%;
+  }
+  .bar:after {
+    right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+    from { background:rgb(0, 191, 217); }
+    to  { width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+    from { background:rgb(0, 191, 217); }
+    to  { width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+    from { background:rgb(0, 191, 217); }
+    to  { width:0; background:transparent; }
+  }
+
+  /* button */
+
+  button {
+    --c:  rgb(0, 191, 217); /* the color*/
+    
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+  }
+  button:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+  }
+  button:active {
+    box-shadow: 0 0 9e9q inset #0009; 
+    background-color: var(--c);
+    color: #fff;
+  }
+
+  button {
+    font-family: system-ui, sans-serif;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: .1em .4em;
+    font-weight: bold;  
+    border: none;
+  }
+
+  .input-in{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .text_hide{
+    display: hidden;
+  }
