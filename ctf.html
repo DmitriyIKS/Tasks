@@ -60,6 +60,20 @@
                   <p class="result" id="res2"></p>
                 </div>
             </div>
+
+            <div class=" card [ is-collapsed ] ">
+                <div class="card__inner [ js-expander ]">
+                    <span class="tasksdes" onclick="show1()"><a href="#">Hints</a> </span>
+                    <div class="spoiler_wrap" id="hint1">
+                            <!-- <span>Hint 1</span>
+                            <p class="tasksdes text_hide"><a href="https://learn.microsoft.com/ru-ru/microsoft-edge/devtools-guide-chromium/storage/cookies">Как изменить куки?</a></p>
+                            <span>Hint 1.2</span>
+                            <p class="tasksdes text_hide">admin</p>
+                            <span>Hint 2</span>
+                            <p class="tasksdes text_hide">s3ssion1d</p> -->
+                    </div>                  
+                </div>
+            </div>
             </div>
 
 
@@ -104,6 +118,19 @@
                     </div>
                 </div>
             
+                <div class=" card [ is-collapsed ] ">
+                    <div class="card__inner [ js-expander ]">
+                        <span class="tasksdes" onclick="show2()"><a href="#">Hints</a></span>
+                        <div class="spoiler_wrap" id="hint2">
+                            <!-- <span>Hint 3</span>
+                            <p class="tasksdes">binwalk -e file.jpg</p>
+                            <span>Hint 3.2</span>
+                            <p class="tasksdes">Или закинь <a href="http://hexed.it">сюда</a> изображение</p>
+                            <span>Hint 4</span>
+                            <p class="tasksdes">За границей изображения что-то есть</p> -->
+                        </div>
+                    </div>
+                </div>
         </div>
 
         <h1 style="margin: 30px;">REVERSE</h1>
@@ -155,6 +182,13 @@
     <!-- JS scripts -->
     <script src="./ctf/script.js" async defer></script>
     <script src="./ctf/tasks.js"></script>
-
+    <script>
+        function show1() {
+            document.getElementById("hint1").innerHTML = "<span>Hint 1</span><p class=`tasksdes text_hide`><a href=`https://learn.microsoft.com/ru-ru/microsoft-edge/devtools-guide-chromium/storage/cookies`>Как изменить куки?</a></p><span>Hint 1.2</span><p class=`tasksdes text_hide`>admin</p><span>Hint 2</span><p class=`tasksdes text_hide`>s3ssion1d</p></div>";
+        }
+        function show2() {
+            document.getElementById("hint2").innerHTML = "<span>Hint 3</span><p class=`tasksdes`>binwalk -e file.jpg</p><span>Hint 3.2</span><p class=`tasksdes`>Или закинь <a href=`http://hexed.it`>сюда</a> изображение</p><span>Hint 4</span><p class=`tasksdes`>За границей изображения что-то есть</p>";
+        }
+    </script>
 </body>
 </html>
