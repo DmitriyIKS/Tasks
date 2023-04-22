@@ -219,3 +219,27 @@ P{
     display: flex;
     justify-content: space-between;
   }
+
+  footer {
+    margin: 2%;
+    text-align: center;
+    color: black;
+    padding-bottom: 4rem;
+  }
+  
+  footer .copyright {
+    margin-bottom: .3rem;
+    color: black;
+  }
+  
+  footer .credits {
+    margin-bottom: 0;
+  }
+  
+  footer .credits a {
+    color: black;
+  }
+
+  .white {
+    color: white;
+  }
